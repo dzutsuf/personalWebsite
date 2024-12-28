@@ -49,10 +49,7 @@
         />
       </div>
       <div class="profile-picture">
-        <img
-          src="C:\Users\othma\Personal Website\src\assets\profile.png"
-          alt="Utsman Ahmad"
-        />
+        <img src="../assets/profile.png" alt="Utsman Ahmad" />
       </div>
     </div>
   </div>
