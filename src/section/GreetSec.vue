@@ -21,7 +21,7 @@
           </a>
 
           <a
-            href="https://www.linkedin.com/in/utsman-ahmad-58ba90253/"
+            href="https://www.instagram.com/syuhada_ahm/"
             class="icon"
             target="_blank"
             rel="noopener noreferrer"
