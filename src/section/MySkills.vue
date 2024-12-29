@@ -24,6 +24,7 @@
 <script>
 import arduino from "../assets/Arduino.svg";
 import opencvSVG from "../assets/OpenCV.svg";
+import MySQL from "../assets/MySQL.svg";
 
 export default {
   data() {
@@ -72,6 +73,11 @@ export default {
         {
           name: "Arduino",
           svg: arduino,
+          iconBgColor: "linear-gradient(45deg, #3399ff, #Ffff)",
+        },
+        {
+          name: "MySQL",
+          svg: MySQL,
           iconBgColor: "linear-gradient(45deg, #3399ff, #Ffff)",
         },
         {
