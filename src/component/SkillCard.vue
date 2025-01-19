@@ -1,6 +1,6 @@
 <template>
   <div class="skill-card">
-    <div class="skill-icon" :style="{ backgroundColor: iconBgColor }">
+    <div class="skill-icon" :style="{ background: iconBgColor }">
       <i :class="icon"></i>
     </div>
     <div class="skill-details">
@@ -30,15 +30,16 @@ export default {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   color: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 150px; /* Menyesuaikan lebar kartu */
-  height: 180px; /* Menyesuaikan tinggi kartu */
   text-align: center;
+  width: 150px;
+  height: 180px;
+  animation: float 5s infinite ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1) translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 .skill-icon {
@@ -55,7 +56,7 @@ export default {
 }
 
 .skill-icon:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 .skill-details h3 {
@@ -63,5 +64,17 @@ export default {
   font-size: 18px;
   font-weight: 600;
   color: #fff;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 </style>

@@ -42,6 +42,7 @@
 
 <script>
 import InfoCard from "../component/InfoCard.vue";
+import Swal from "sweetalert2";
 
 export default {
   name: "ContactSection",
@@ -71,14 +72,24 @@ export default {
       },
     };
   },
+
   methods: {
     handleSubmit() {
-      alert(
-        `Message sent!\nName: ${this.form.name}\nEmail: ${this.form.email}\nMessage: ${this.form.message}`
-      );
+      Swal.fire({
+        title: "Message Sent!",
+        html: `
+        <p><strong>Name:</strong> ${this.form.name}</p>
+        <p><strong>Email:</strong> ${this.form.email}</p>
+
+      `,
+        icon: "success",
+        confirmButtonText: "OK",
+        confirmButtonColor: "#fca94f",
+      });
+
+      // Reset form fields
       this.form.name = "";
       this.form.email = "";
-      this.form.message = "";
     },
   },
 };
